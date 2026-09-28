@@ -1,7 +1,7 @@
 import { http, createConfig } from 'wagmi'
-import { base, mainnet, optimism } from 'wagmi/chains'
+import { base, mainnet, optimism } from 'wagmi/chains' //for now we don't need this 
 import { injected, metaMask, safe, walletConnect } from 'wagmi/connectors'
-import { anvil } from "./chain"
+import { anvil } from "./src/utils/chain"
 
 export const config = createConfig({
   chains: [anvil],
