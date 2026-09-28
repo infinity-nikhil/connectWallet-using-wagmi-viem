@@ -1,25 +1,14 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { WagmiProvider, useConnection } from 'wagmi'
-import { config } from './config'
-import { Connection } from './connection'
-import { WalletOptions } from './wallet-options'
+// Now no need to cluter the provider the connect all here 
+//There were two things -> the provider and the connection logic/code 
+//provider is in main.jsx and the connection logic is in Navbar
 
-const queryClient = new QueryClient()
+import Navbar from './components/navbar';
 
-function ConnectWallet() {
-  const { isConnected } = useConnection()
-  if (isConnected) return <Connection />
-  return <WalletOptions />
-}
-
-function App() {
+export default function App() {
   return (
-    <WagmiProvider config={config}>
-      <QueryClientProvider client={queryClient}> 
-        <ConnectWallet />
-      </QueryClientProvider> 
-    </WagmiProvider>
+    <>
+      <Navbar />          {/* always at the top */}
+      <main>{/* rest of your app */}</main>
+    </>
   )
 }
-
-export default App;
