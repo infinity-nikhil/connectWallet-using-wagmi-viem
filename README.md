@@ -21,3 +21,7 @@ The whole concepts revolve arround 2 providers - `WagmiProvider` (wagmi) and `Qu
 We have to wrap our entier application with these twos........And from where do we wrap ? 
 
 From main.tsx just to make App.tsx more cleaner And then create a navbar 
+
+## How ever these are not the standard ways to do it...
+The best stack for wallet connection in ethereum is rainbowkit + wagmi + viem + tanstackquery they can cover almost all accepts of frontend
+And for the app you just have to go to rainbowkit and install the prebuild next rainbowkit
